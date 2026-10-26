@@ -4,7 +4,7 @@
 
 This is a write-up of migrating a self-hosted container platform's storage backend from a 500GB Proxmox vDisk to a 64GB vDisk — and of the first attempt failing, being rolled back, and the actual root cause turning out to be a TrueNAS replication-task behavior that isn't obvious from the naming or configuration of the snapshots involved.
 
-It's also the origin of a separate issue documented in [`Loki Storage and ZFS Snapshot Troubleshooting`](./Loki-Storage-and-ZFS-Snapshot-Troubleshooting.md) — the leftover ZFS snapshots from this same replication run were what later showed up as an apparent Grafana Loki storage/retention problem. That connection wasn't obvious until this write-up and that one were compared side by side.
+It's also the origin of a separate issue documented in [`Loki Storage and ZFS Snapshot Troubleshooting`](https://github.com/TheREProject/Loki-Storage-and-ZFS-Snapshot-Troubleshooting/blob/main/README.md) — the leftover ZFS snapshots from this same replication run were what later showed up as an apparent Grafana Loki storage/retention problem. That connection wasn't obvious until this write-up and that one were compared side by side.
 
 ## Environment
 
